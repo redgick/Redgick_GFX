@@ -7,7 +7,7 @@
 #include <Redgick_MatrixLaboitePro.h>
 Redgick_MatrixLaboitePro afficheur;
 
-uint8_t image[64] = {0b00000000, 0b00000000, 0b00000000, 0b00000000,
+uint8_t image[64] = {0b00000000, 0b00000000, 0b00000000, 0b00000000, // red LEDs
                      0b01000000, 0b00000000, 0b00000000, 0b00000000,
                      0b01000000, 0b00000000, 0b00000000, 0b00000000,
                      0b01000001, 0b11000000, 0b00000000, 0b00000000,
