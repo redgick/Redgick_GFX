@@ -3,7 +3,7 @@ The core graphics library for all our displays.
 
 ## Installation
 
-[Download the repository](https://github.com/redgick/Redgick_GFX/archive/master.zip) and unzip the following library folders into the Arduino libraries folder on your computer :
+[Download this repository](https://github.com/redgick/Redgick_GFX/archive/master.zip) and unzip the following library folders into the Arduino libraries folder on your computer :
 
  - Redgick_GFX
  - Redgick_MatrixHT1632C
@@ -22,15 +22,15 @@ In the Arduino IDE, look at *File/Examples/Redgick_GFX* folder to load an exampl
   <th>Uno</th><th>Mega or Mega 2560</th><th>Mega ADK</th><th>NodeMCU</th>
 </tr>
 <tr>
-  <th>[Sure Electronics 32x16 RG Dual Color LED Dot Matrix Unit Board](http://store3.sure-electronics.com/de-dp14116)<td>OK</td><td>OK</td><td>OK</td><td>OK</td><td>Redgick_MatrixHT1632C</td>
+  <th><a href="http://store3.sure-electronics.com/de-dp14116">Sure Electronics 32x16 RG Dual Color LED Dot Matrix Unit Board</a><td>OK</td><td>OK</td><td>OK</td><td>OK</td><td>Redgick_MatrixHT1632C</td>
 </tr>
 <tr>
-  <th>[laboîte originale](https://www.laboite.cc/help)</th><td>OK</td><td>OK</td><td>OK</td><td>OK</td><td>Redgick_MatrixHT1632C</td>
+  <th><a href="https://www.laboite.cc/help">laboîte originale</a></th><td>OK</td><td>OK</td><td>OK</td><td>OK</td><td>Redgick_MatrixHT1632C</td>
 </tr>
 <tr>
   <th>laboîte pro (prototype)</th><td>-</td><td>-</td><td>-</td><td>OK</td><td>Redgick_MatrixLaboitePro</td>
 </tr>
 <tr>
-  <th>[laboîte maker](https://github.com/laboiteproject/laboite-maker)</th><td>-</td><td>-</td><td>-</td><td>OK</td><td>Redgick_MatrixMAX72XX</td>
+  <th><a href="https://github.com/laboiteproject/laboite-maker">laboîte maker</a></th><td>-</td><td>-</td><td>-</td><td>OK</td><td>Redgick_MatrixMAX72XX</td>
 </tr>
 </table>
