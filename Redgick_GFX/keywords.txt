@@ -19,6 +19,8 @@ getBitmap	KEYWORD1
 clear	KEYWORD1
 getBuffer	KEYWORD1
 setPixel	KEYWORD1
+drawBitmap	KEYWORD1
+print	KEYWORD1
 
 #######################################
 # Instances (KEYWORD2)
