@@ -1,16 +1,22 @@
 #######################################
-# Syntax Coloring Map For Redgick_GFX
+# Syntax Coloring Map For Redgick_MatrixLaboitePro
 #######################################
 
 #######################################
 # Datatypes (KEYWORD1)
 #######################################
 
-Redgick_GFX	KEYWORD1
+Redgick_MatrixLaboitePro	KEYWORD1
 
 #######################################
 # Methods and Functions (KEYWORD2)
 #######################################
+
+init	KEYWORD2
+intensity	KEYWORD2
+clear	KEYWORD2
+test	KEYWORD2
+display	KEYWORD2
 
 #######################################
 # Instances (KEYWORD2)
