@@ -6,7 +6,7 @@
 
 // include description files for other libraries used
 #include <fonts.h>
-
+#include <stdlib.h>
 // Constructor /////////////////////////////////////////////////////////////////
 // Function that handles the creation and setup of instances
 
@@ -29,7 +29,11 @@ Screen::Screen(uint8_t width, uint8_t height, uint8_t color_channels) {
   this->height = height;
   this->color_channels = color_channels;
   this->buffer_lenght = width * height * color_channels / 8 ;
+
+#ifdef __AVR__
   this->buffer = malloc(sizeof(uint8_t) * buffer_lenght);
+#endif
+
   clear();
 };
 

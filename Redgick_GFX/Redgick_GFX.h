@@ -92,7 +92,13 @@ class Screen {
 
   // library-accessible "private" interface
   private:
+
+#ifdef __AVR__
     uint8_t* buffer = NULL; // pointeur qui peut contenir l'adresse du premier élément du tableau buffer créé en même temps que l'instance de la classe
+#elif defined(ESP8266)
+    uint8_t buffer[128];
+#endif
+
     uint16_t buffer_lenght = 0;
     uint8_t width = 0;
     uint8_t height = 0;
