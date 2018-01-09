@@ -15,12 +15,12 @@ Screen	KEYWORD1
 # Methods and Functions (KEYWORD2)
 #######################################
 
-getBitmap	KEYWORD1
-clear	KEYWORD1
-getBuffer	KEYWORD1
-setPixel	KEYWORD1
-drawBitmap	KEYWORD1
-print	KEYWORD1
+getBitmap	KEYWORD2
+clear	KEYWORD2
+getBuffer	KEYWORD2
+setPixel	KEYWORD2
+drawBitmap	KEYWORD2
+print	KEYWORD2
 
 #######################################
 # Instances (KEYWORD2)
