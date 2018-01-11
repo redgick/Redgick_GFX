@@ -24,17 +24,12 @@ Font::Font(uint8_t min, uint8_t max, uint8_t unknown, Bitmap* characters) {
   this->characters = characters;
 };
 
+Screen::Screen() {
+
+};
+
 Screen::Screen(uint8_t width, uint8_t height, uint8_t color_channels) {
-  this->width = width;
-  this->height = height;
-  this->color_channels = color_channels;
-  this->buffer_lenght = width * height * color_channels / 8 ;
-
-#ifdef __AVR__
-  this->buffer = malloc(sizeof(uint8_t) * buffer_lenght);
-#endif
-
-  clear();
+  init(width, height, color_channels);
 };
 
 // Public Methods //////////////////////////////////////////////////////////////
@@ -46,6 +41,19 @@ Bitmap Font::getBitmap(char c) {
   }
   return characters[c - min];
 };
+
+void Screen::init(uint8_t width, uint8_t height, uint8_t color_channels) {
+  this->width = width;
+  this->height = height;
+  this->color_channels = color_channels;
+  this->buffer_lenght = width * height * color_channels / 8 ;
+
+  #ifdef __AVR__
+  this->buffer = malloc(sizeof(uint8_t) * buffer_lenght);
+  #endif
+
+  clear();
+}
 
 void Screen::clear() {
   for (int i = 0; i < buffer_lenght; i++) {

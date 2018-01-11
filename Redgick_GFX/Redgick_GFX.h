@@ -82,7 +82,9 @@ class Font {
 class Screen {
   // user-accessible "public" interface
   public:
+    Screen();
     Screen(uint8_t width, uint8_t height, uint8_t color_channels);
+    void init(uint8_t width, uint8_t height, uint8_t color_channels);
     void clear();
     uint8_t* getBuffer();
     void setPixel(uint8_t x, uint8_t y, uint8_t color);

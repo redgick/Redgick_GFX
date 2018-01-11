@@ -16,6 +16,7 @@ Screen	KEYWORD1
 #######################################
 
 getBitmap	KEYWORD2
+init	KEYWORD2
 clear	KEYWORD2
 getBuffer	KEYWORD2
 setPixel	KEYWORD2
