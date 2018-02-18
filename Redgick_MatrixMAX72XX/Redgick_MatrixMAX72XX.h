@@ -17,7 +17,8 @@
 #define pinCS   15
 #define pinCLK  14
 
-#define CLK_DELAY         __asm__("nop\n\t""nop\n\t""nop\n\t""nop\n\t""nop\n\t")
+//#define CLK_DELAY         __asm__("nop\n\t""nop\n\t""nop\n\t""nop\n\t""nop\n\t")
+#define CLK_DELAY         // mesuré à l'oscilloscope : 3 MHz par cycle
 #define MAX72XX_CLK_0     (GPIO_REG_WRITE(GPIO_OUT_W1TC_ADDRESS, 1<<14))
 #define MAX72XX_CLK_1     (GPIO_REG_WRITE(GPIO_OUT_W1TS_ADDRESS, 1<<14))
 #define MAX72XX_CS_0     (GPIO_REG_WRITE(GPIO_OUT_W1TC_ADDRESS, 1<<15))
