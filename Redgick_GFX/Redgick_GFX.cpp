@@ -74,9 +74,15 @@ void Screen::setPixel(uint8_t x, uint8_t y, uint8_t color) {
 
   uint16_t offset = width * height / 8;
 
-  // on commence par éteindre le pixel sur tous les canaux
+  // pour les afficheurs qui n'affichent pas toutes les couleurs (les afficheurs monochromes
+  // et bicolors), on utilise le canal le plus élevé pour afficher les couleurs des canaux supérieurs.
+  if (color >> color_channels) {
+    color = color | ( 0b00000001 << (color_channels - 1) );
+  }
+
+  // pour chaque canal de couleur, on allume ou non la led concernée
   for (uint8_t channel = 0 ; channel < color_channels ; channel++) {
-    if ( ( color & ( 0b0000001 << channel ) ) >> channel ) {
+    if ( ( color & ( 0b00000001 << channel ) ) >> channel ) {
       // on allume le canal
       buffer[(x / 8) + (y * (width / 8) ) + (offset * channel)] = buffer[(x / 8) + (y * (width / 8)) + (offset * channel)] | (0b10000000 >> (x % 8));
     }
