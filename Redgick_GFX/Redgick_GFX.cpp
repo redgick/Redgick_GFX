@@ -65,7 +65,7 @@ uint8_t* Screen::getBuffer() {
   return buffer;
 };
 
-void Screen::setPixel(uint8_t x, uint8_t y, uint8_t color) {
+void Screen::setPixel(uint16_t x, uint16_t y, uint8_t color) {
 
   if (x >= width or y >= height) {
     // en dehors de l'écran !
@@ -94,7 +94,7 @@ void Screen::setPixel(uint8_t x, uint8_t y, uint8_t color) {
 
 };
 
-void Screen::drawBitmap(uint8_t x, uint8_t y, Bitmap bitmap, uint8_t color) {
+void Screen::drawBitmap(uint16_t x, uint16_t y, Bitmap bitmap, uint8_t color) {
   // cette fonction est très moche !
   // elle nécessite d'être réecrite
   int bitIndex = 0;
@@ -183,7 +183,7 @@ void Screen::drawBitmap(uint8_t x, uint8_t y, Bitmap bitmap, uint8_t color) {
   }
 };
 
-void Screen::print(uint8_t x, uint8_t y, String s, uint8_t font_name, uint8_t color) {
+void Screen::print(uint16_t x, uint16_t y, String s, uint8_t font_name, uint8_t color) {
   int offset = 0;
   for (int i = 0; i < s.length(); i++) {
     switch (font_name) {
@@ -205,6 +205,6 @@ void Screen::print(uint8_t x, uint8_t y, String s, uint8_t font_name, uint8_t co
 // Private Methods /////////////////////////////////////////////////////////////
 // Functions only available to other functions in this library
 
-void Screen::print(uint8_t x, uint8_t y, char c, Font * font, uint8_t color) {
+void Screen::print(uint16_t x, uint16_t y, char c, Font * font, uint8_t color) {
   drawBitmap(x, y, font->getBitmap(c), color);
 };

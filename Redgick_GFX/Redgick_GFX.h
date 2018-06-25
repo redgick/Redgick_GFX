@@ -87,10 +87,10 @@ class Screen {
     void init(uint8_t width, uint8_t height, uint8_t color_channels);
     void clear();
     uint8_t* getBuffer();
-    void setPixel(uint8_t x, uint8_t y, uint8_t color);
-    void drawBitmap(uint8_t x, uint8_t y, Bitmap bitmap, uint8_t color);
-    void print(uint8_t x, uint8_t y, String s, uint8_t font_name, uint8_t color);
-    void print(uint8_t x, uint8_t y, String s) { print(x, y, s, FONT_DEFAULT, RED); };
+    void setPixel(uint16_t x, uint16_t y, uint8_t color);
+    void drawBitmap(uint16_t x, uint16_t y, Bitmap bitmap, uint8_t color);
+    void print(uint16_t x, uint16_t y, String s, uint8_t font_name, uint8_t color);
+    void print(uint16_t x, uint16_t y, String s) { print(x, y, s, FONT_DEFAULT, RED); };
 
   // library-accessible "private" interface
   private:
@@ -106,7 +106,7 @@ class Screen {
     uint8_t height = 0;
     uint8_t color_channels = 0;
 
-    void print(uint8_t x, uint8_t y, char c, Font* font, uint8_t color);
+    void print(uint16_t x, uint16_t y, char c, Font* font, uint8_t color);
 };
 
 #endif
